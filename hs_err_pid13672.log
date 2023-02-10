@@ -1,0 +1,197 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 167772160 bytes for Failed to commit area from 0x0000000761200000 to 0x000000076b200000 of length 167772160.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3619), pid=13672, tid=2716
+#
+# JRE version:  (11.0.13) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+0-b1751.21-8125866, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\Bayan\AndroidStudioProjects\Newsapp\app\build\20230209_8972098344742607316.compiler.options
+
+Host: Intel(R) Core(TM) i5-4310M CPU @ 2.70GHz, 4 cores, 9G,  Windows 11 , 64 bit Build 22621 (10.0.22621.1194)
+Time: Thu Feb  9 12:20:04 2023 Pacific Standard Time elapsed time: 0.016383 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022c57b19800):  JavaThread "Unknown thread" [_thread_in_vm, id=2716, stack(0x0000008be7900000,0x0000008be7a00000)]
+
+Stack: [0x0000008be7900000,0x0000008be7a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6100fa]
+V  [jvm.dll+0x747090]
+V  [jvm.dll+0x7486ad]
+V  [jvm.dll+0x748d83]
+V  [jvm.dll+0x24ab48]
+V  [jvm.dll+0x60d164]
+V  [jvm.dll+0x601e75]
+V  [jvm.dll+0x308bdb]
+V  [jvm.dll+0x308b4a]
+V  [jvm.dll+0x308a22]
+V  [jvm.dll+0x30d986]
+V  [jvm.dll+0x357093]
+V  [jvm.dll+0x357796]
+V  [jvm.dll+0x357193]
+V  [jvm.dll+0x2e3448]
+V  [jvm.dll+0x2e45f7]
+V  [jvm.dll+0x7242e7]
+V  [jvm.dll+0x725adc]
+V  [jvm.dll+0x364629]
+V  [jvm.dll+0x707cee]
+V  [jvm.dll+0x3d2633]
+V  [jvm.dll+0x3d4a21]
+C  [jli.dll+0x536b]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x126bd]
+C  [ntdll.dll+0x5dfb8]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000022c55824ba0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022c57b32800 GCTaskThread "GC Thread#0" [stack: 0x0000008be7a00000,0x0000008be7b00000] [id=8468]
+  0x0000022c57b71000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008be7b00000,0x0000008be7c00000] [id=12684]
+  0x0000022c57b72000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000008be7c00000,0x0000008be7d00000] [id=8600]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa50f33dd7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022c57b15af0] Heap_lock - owner thread: 0x0000022c57b19800
+
+Heap address: 0x0000000761200000, size: 2542 MB, Compressed Oops mode: Non-zero based: 0x0000000761200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.011 Loaded shared library C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff792230000 - 0x00007ff79223a000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\java.exe
+0x00007ffab4dd0000 - 0x00007ffab4fe4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffab3a40000 - 0x00007ffab3b03000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffab23b0000 - 0x00007ffab274c000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffab2ac0000 - 0x00007ffab2bd1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa9e8b0000 - 0x00007ffa9e8c9000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\jli.dll
+0x00007ffa9c830000 - 0x00007ffa9c847000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\VCRUNTIME140.dll
+0x00007ffab3b20000 - 0x00007ffab3ccd000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffab2750000 - 0x00007ffab2776000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffab3840000 - 0x00007ffab3869000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffab2290000 - 0x00007ffab23a2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffab29b0000 - 0x00007ffab2a4a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa9ef40000 - 0x00007ffa9f1ce000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007ffab40a0000 - 0x00007ffab4147000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffab3cd0000 - 0x00007ffab3d02000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa86130000 - 0x00007ffa861cd000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\msvcp140.dll
+0x00007ffa50c40000 - 0x00007ffa51742000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\server\jvm.dll
+0x00007ffab3870000 - 0x00007ffab391e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffab41e0000 - 0x00007ffab4284000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffab2be0000 - 0x00007ffab2cf5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffab37a0000 - 0x00007ffab37a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffaad7d0000 - 0x00007ffaad7d9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffab4890000 - 0x00007ffab4901000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffaa2f00000 - 0x00007ffaa2f34000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaa6b80000 - 0x00007ffaa6b8a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffab1220000 - 0x00007ffab1238000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffaa5ee0000 - 0x00007ffaa5ef1000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\verify.dll
+0x00007ffa9e5a0000 - 0x00007ffa9e7ce000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffab3d10000 - 0x00007ffab409a000 	C:\WINDOWS\System32\combase.dll
+0x00007ffab2eb0000 - 0x00007ffab2f87000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffaa4890000 - 0x00007ffaa48c2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffab2210000 - 0x00007ffab228b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffaa5c10000 - 0x00007ffaa5c39000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\java.dll
+0x00007ffaad700000 - 0x00007ffaad70b000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\jimage.dll
+0x00007ffaa5bc0000 - 0x00007ffaa5bd8000 	C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d;C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin\server
+
+VM Arguments:
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\Bayan\AndroidStudioProjects\Newsapp\app\build\20230209_8972098344742607316.compiler.options
+java_class_path (initial): C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.7.20\8db18559a581dd2c36ddfd5046af145650f5b126\kotlin-compiler-embeddable-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.7.20\12b2501e33bb6373e8e347c86d85481863629381\kotlin-reflect-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.20\726594ea9ba2beb2ee113647fefa9a10f9fabe52\kotlin-stdlib-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.7.20\bcd1cc6f865e632550357fcc59f5ffd532615a8\kotlin-script-runtime-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\1.7.20\1e24355adad8d529d75d5b19eab55484057431ba\kotlin-daemon-embeddable-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20200330\3afb14d5f9ceb459d724e907a21145e8ff394f02\trove4j-1.0.20200330.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.6.0\330f2244e9030119ab3030fc3fededc86713d9cc\jna-5.6.0.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.7.20\e15351bdaf9fa06f009be5da7a202e4184f00ae3\kotlin-stdlib-common-1.7.20.jar;C:\Users\Bayan\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 167772160                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2665480192                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.5.1;C:\Users\Bayan\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Bayan\AppData\Local\Programs\Python\Python311\;C:\Users\Bayan\AppData\Local\Microsoft\WindowsApps;C:\Users\Bayan\AppData\Local\JetBrains\Toolbox\scripts;D:\Libraries\Programs\Executable;C:\Users\Bayan\Programs\Installer\yt-dlp\yt-dlp-gui\src\dist\yt-dlp-gui;C:\Users\Bayan\AppData\Local\Microsoft\WindowsApps;D:\Libraries\Programs\Android;C:\Users\Bayan\AppData\Local\Android\Sdk\platform-tools;
+USERNAME=Bayan
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.1194)
+OS uptime: 1 days 3:21 hours
+Hyper-V role detected
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3 microcode 0x28, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+
+Memory: 4k page, system-wide physical 10165M (955M free)
+TotalPageFile size 10165M (AvailPageFile size 126M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 211M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.13+0-b1751.21-8125866) for windows-amd64 JRE (11.0.13+0-b1751.21-8125866), built on Feb  2 2022 03:00:22 by "builder" with MS VC++ 14.0 (VS2015)
+
+END.
