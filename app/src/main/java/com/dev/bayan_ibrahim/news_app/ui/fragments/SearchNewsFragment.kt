@@ -4,12 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.dev.bayan_ibrahim.news_app.R
 import com.dev.bayan_ibrahim.news_app.databinding.FragmentSearchnewsBinding
+import com.dev.bayan_ibrahim.news_app.domain.view_model.NewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchNewsFragment: Fragment(R.layout.fragment_searchnews) {
     private lateinit var binding: FragmentSearchnewsBinding
+    private val newsViewModel: NewsViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = FragmentSearchnewsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
